@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-for letter in range(ord('a'), ord('z')+1):
-    if chr(letter) != (ord('q')) and chr(letter) != (ord('e')):
-        print("{}".format(chr(letter)), end="")
+
+for alpha in range(26):
+    if alpha != 4 and alpha != 16:
+        print("{:s}".format(chr(alpha + ord("a"))), end="")
