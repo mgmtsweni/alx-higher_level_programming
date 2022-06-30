@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for alpha in range(97, 123):
-    print("{}".format(chr(alpha)), end="")
+for letter in range(ord('a'), ord('z')+1):
+    print("{}".format(chr(letter)), end="")
