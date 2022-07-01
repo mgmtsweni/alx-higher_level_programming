@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     if count >= 1:
         count = 0
-        for arg in sys.argv: #read arguments
+        for arg in sys.argv:
             if count != 0:
                 print("{}: {}".format(count, arg))
             count += 1
