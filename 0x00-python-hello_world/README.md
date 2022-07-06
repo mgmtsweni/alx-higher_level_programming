@@ -1,4 +1,4 @@
-Python - Hello, World
+Python - Hello World
 
 Task 0 : Write a Shell script that runs a Python script.
 Task 1: Write a Shell script that runs Python code.
