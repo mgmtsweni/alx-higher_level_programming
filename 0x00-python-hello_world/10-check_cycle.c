@@ -1,9 +1,8 @@
 #include "lists.h"
-#include <stdio.h>
-
 /**
  * check_cycle - checks if singly linked list is a cycle
  * Return: 0 if no cycle, 1 is yes
+ * @listint_t: the list_t linked list
  */
 int check_cycle(listint_t *list)
 {
@@ -20,11 +19,10 @@ int check_cycle(listint_t *list)
 			fast = fast->next->next;
 			slow = slow->next;
 
-			if (fast == slow) 
-				return (1);
+			if (fast == slow)
+			return (1);
 		}
 		else
 			return (0);
 	}
-
 }
