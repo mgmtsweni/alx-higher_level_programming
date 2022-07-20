@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square class with private instance attribute size"""
 
+
 class Square:
     """
     Arguments:

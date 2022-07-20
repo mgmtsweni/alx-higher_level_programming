@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-Defines class Square with private attribute size
-"""
+"""Defines class Square with private attribute size"""
+
+
 class Square:
     """
     Arguments:
