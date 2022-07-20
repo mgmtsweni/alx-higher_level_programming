@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Square class with private instance attribute size"""
-
+"""Defines class Square with private size and public area
+Can access and update size"""
 
 class Square:
     """
@@ -23,23 +23,26 @@ class Square:
             """
             return (self.__size)**2
 
-        @property
-        def size(self):
-            """"
-            Getter
-            Return: size
-            """
-            return (self.__size)
+    @property
+    def size(self):
+        """"
+        Getter
 
-        @size.setter
-        def size(self, value):
-            """
-            Setter
-            Args:
+        Return: size
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter
+
+        Args:
             value: sets size to value, if int and >= 0
-            """
-            if type(size) is not int:
-                raise TypeError("size must be an integer")
-            elif size < 0:
-                raise ValueError("size must be >= 0")
+        """
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
             self.__size = value
