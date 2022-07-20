@@ -4,8 +4,10 @@
 
 class Square:
     """
-    Arguments:
-        size: size of Square
+    Initializes square
+
+    Attributes:
+            __size (int): size of a side of square, defaults to 0 if none
     """
     def __init__(self, size=0):
         if type(size) is not int:
@@ -16,5 +18,5 @@ class Square:
             self.__size = size
 
         def area(self):
-            """Returns the area of a Square instance"""
+            """Returns the calculated area of a Square instance"""
             return (self.__size ** 2)
