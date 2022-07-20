@@ -5,9 +5,8 @@
 class Square:
     """
     Initializes square
-
     Attributes:
-            __size (int): size of a side of square, defaults to 0 if none
+        __size (int): size of a side of square, defaults to 0 if none
     """
     def __init__(self, size=0):
         if type(size) is not int:
@@ -20,8 +19,6 @@ class Square:
     def area(self):
         """
         Calculates area of square
-
-        Returns:
-            area
+        Returns: area
         """
         return (self.__size)**2
