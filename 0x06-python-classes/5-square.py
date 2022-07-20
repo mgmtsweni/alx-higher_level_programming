@@ -1,42 +1,70 @@
 #!/usr/bin/python3
-"""Square class with private instance attribute size"""
+"""
+Defines class Square with private size and public area
+Can access and update size Can print to 
+stdout the square using #'s
+"""
 
 
 class Square:
     """
-    Arguments:
-        size: size of Square
+    class Square definition
+
+    Args:
+        size (int): size of a side in square
+
+    Functions:
+        __init__(self, size)
+        size(self)
+        size(self, value)
+        area(self)
+        print(self)
     """
-    def __init__(self, size=0, position=(0, 0)):
-        if type(size) is not int:
+
+    def __init__(self, size=0):
+        """
+        Initializes square
+
+        Attributes:
+            size (int): defaults to 0 if none; don't use __size to call setter
+        """
+        self.size = size
+
+    @property
+    def size(self):
+        """"
+        Getter
+
+        Return: size
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter
+
+        Args:
+            value: sets size to value if int and >= 0
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
-
-        def area(self):
-            """Returns the area of a Square instance"""
-            return (self.__size)**2
-
-        @property
-        def size(self):
-            """Getter of the private attribute size"""
-            return (self.__size)
-
-        @size.setter
-        def size(self, value):
-            """Setter for the size private attribute"""
-            if type(size) is not int:
-                raise TypeError("size must be an integer")
-            elif size < 0:
-                raise ValueError("size must be >= 0")
             self.__size = value
 
-        def my_print(self):
-            """Prints to stdout the square with the character #"""
-            if self.__size == 0:
-                print()
-            else:
-                for rows in range(self.__size):
-                    print("#" * self.__size)
+    def area(self):
+        """
+        Calculates area of square
+
+        Returns:
+            area
+        """
+        return (self.__size)**2
+
+    def my_print(self):
+        """
+        Prints square with #'s
+        """
+        print("\n".join(["#" * self.__size for rows in range(self.__size)]))
