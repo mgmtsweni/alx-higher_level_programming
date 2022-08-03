@@ -16,12 +16,12 @@ class Rectangle(BaseGeometry):
 
         self.__width = width
         self.__height = height
-    
+
     def area(self):
         """area of ractangle"""
         return (self.__width * self.__height)
 
     def __str__(self):
         """prints"""
-        return "[{:s}] {:d}/{:d}".format(self.__class__.__name__,
-                                        self.__width, self.__height)
+        return "[{}] {}/{}".format(type(self).__name__,
+                                   self.__width, self.__height)
