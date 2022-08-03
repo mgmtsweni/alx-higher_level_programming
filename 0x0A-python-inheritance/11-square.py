@@ -4,6 +4,7 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """inherits from Rectangle"""
     def __init__(self, size):
@@ -14,8 +15,8 @@ class Square(Rectangle):
     
     def area(self):
         """area of a square"""
-        return self.__size ** 2
-    
+        return self.__size**2
+
     def __str__(self):
         """prints"""
         return "[{}] {}/{}".format(type(self).__name__,
