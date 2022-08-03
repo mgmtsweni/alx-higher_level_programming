@@ -2,9 +2,9 @@
 """function that returns the list"""
 
 
-class Mylist(list):
+class MyList(list):
     """inharits from list"""
 
     def print_sorted(self):
-        """ prints the list """
+        """ prints the sorted list """
         print(sorted(self))
