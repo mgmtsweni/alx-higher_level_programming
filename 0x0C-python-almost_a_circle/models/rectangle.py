@@ -14,22 +14,22 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """getter for width"""
         return self.__width
-    
+
     @property
     def height(self):
         """getter for height"""
         return self.__height
-    
+
     @property
-    def  x(self):
+    def x(self):
         """getter for x"""
         return self.__x
-    
+
     @property
     def y(self):
         """getter for y"""
