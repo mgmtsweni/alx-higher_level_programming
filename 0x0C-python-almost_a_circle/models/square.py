@@ -25,9 +25,9 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
-        """Prints [Square] (<id>) <x>/<y> - <size>"""
-        return "({:d}) {:d}/{:d} - {:d}".format(
-            self.id, self.x, self.y, self.size)
+        """Prints Square (<id>) <x>/<y> - <size>"""
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x,
+                                                         self.y, self.width)
 
     def update(self, *args, **kwargs):
         """
