@@ -84,9 +84,12 @@ class Rectangle(Base):
     def __str__(self):
         """returns (<id>) <x>/<y> - <width>/<height> """
         return "({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, 
-            self.__x, self.__y, self.__width, self.__height)
+                                                    self.__x, 
+                                                    self.__y, 
+                                                    self.__width, 
+                                                    self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         set attributes in an order.
         If no args given: set attributes according to kwargs
