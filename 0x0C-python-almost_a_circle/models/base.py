@@ -75,7 +75,7 @@ class Base():
                 instances = cls.from_json_string(f.read())
             for i, dic in enumerate(instances):
                 file.append(cls.create(**instances[i]))
-        except SystemError:
+        except RuntimeError:
             pass
         return file
 
