@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Contains the matrix_mul function
-"""
+"""Contains the matrix_mul function"""
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices(lists of lists of integers/floats)."""
+    """Multiply two matrices(lists of lists of integers/floats)"""
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     l1 = len(m_a)
