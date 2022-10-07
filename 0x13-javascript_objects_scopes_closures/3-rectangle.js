@@ -14,4 +14,4 @@ class Rectangle {
         }
     }
 }
-export default Rectangle;
+module.exports = Rectangle;
