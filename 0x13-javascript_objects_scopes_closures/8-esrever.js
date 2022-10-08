@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 exports.esrever = function (list) {
-  let rev = [];
+  const rev = [];
   while (list.length) {
     rev.push(list.pop());
   }
