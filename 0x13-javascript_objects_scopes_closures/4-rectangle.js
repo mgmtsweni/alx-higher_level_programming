@@ -13,13 +13,13 @@ class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
-  
+
   rotate () {
-    let tmp = this.width;
+    let swp = this.width;
     this.width = this.height;
-    this.height = this.tmp;
+    this.height = this.swp;
   }
-  
+
   double () {
     this.width *= 2;
     this.height *= 2;
