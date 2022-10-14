@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" script that lists all states from the database hbtn_0e_0_usa
-    filters by the letter 'a'
+""" script that adds the State of “Louisiana” to
+    the database hbtn_0e_0_usa
 """
 
 from sqlalchemy import create_engine
@@ -15,8 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    st = '%a%'
-    states = session.query(State).filter(State.name.like(st)).order_by(State.id)
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter_by(name='Louisiana').first()
+    print(str(state.id))
+
+    session.commit()
     session.close()

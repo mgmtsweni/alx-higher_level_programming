@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" script that lists all states from the database hbtn_0e_0_usa
-    filters by the letter 'a'
+""" script that deletes all states from the database hbtn_0e_0_usa
+    with a name containing the letter 'a'
 """
 
 from sqlalchemy import create_engine
@@ -15,8 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    st = '%a%'
-    states = session.query(State).filter(State.name.like(st)).order_by(State.id)
+    states = session.query(State).filter(State.name.like('%a%'))
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        session.delete(state)
+
+    session.commit()
     session.close()

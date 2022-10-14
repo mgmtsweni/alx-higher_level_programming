@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-""" script that lists all states from the database hbtn_0e_0_usa
-    filters by the letter 'a'
+"""
+script that prints all City objects from the database hbtn_0e_0_usa
 """
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
 from model_state import Base, State
+from model_city import City
 
 if __name__ == "__main__":
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
@@ -15,8 +16,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    st = '%a%'
-    states = session.query(State).filter(State.name.like(st)).order_by(State.id)
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    rows = session.query(City, State).filter(City.state_id == State.id)\
+                                     .order_by(City.id).all()
+    for city, state in rows:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
+
+    session.commit()
     session.close()
