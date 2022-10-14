@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ON cities.state_id = states.id WHERE states.name LIKE %s \
     ORDER BY cities.id", (argv[4],))
     rows = cursor.fetchall()
-    
+
     for row in rows:
         print(row)
     cursor.close()
