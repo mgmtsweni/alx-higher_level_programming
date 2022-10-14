@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ script that deletes all states from the database hbtn_0e_0_usa
-    with a name containing the letter 'a'
+    with a name containing the letter 'a'.
 """
 
 from sqlalchemy import create_engine

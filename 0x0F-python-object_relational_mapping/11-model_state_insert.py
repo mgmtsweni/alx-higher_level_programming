@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ script that adds the State of “Louisiana” to
-    the database hbtn_0e_0_usa
+    the database hbtn_0e_0_usa.
 """
 
 from sqlalchemy import create_engine

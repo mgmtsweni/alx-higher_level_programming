@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ script that lists all states from the database hbtn_0e_0_usa
-    filters by the letter 'a'
+    filters by the letter 'a'.
 """
 
 from sqlalchemy import create_engine

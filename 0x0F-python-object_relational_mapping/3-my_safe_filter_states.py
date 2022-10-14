@@ -2,7 +2,7 @@
 """
 - a script that takes in arguments and displays all values
     in the states table of hbtn_0e_0_usa
-- Where name matches the argument and is  safe from MySQL injections!
+- Where name matches the argument and is  safe from MySQL injections
 """
 
 import MySQLdb

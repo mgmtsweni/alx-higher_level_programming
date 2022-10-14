@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class definition of a State"""
+""" Class definition of a State"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base

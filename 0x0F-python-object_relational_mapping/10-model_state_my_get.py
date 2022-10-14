@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ script that prints state name passed as argument
-    from the database hbtn_0e_0_usa
+    from the database hbtn_0e_0_usa.
 """
 
 from sqlalchemy import create_engine
