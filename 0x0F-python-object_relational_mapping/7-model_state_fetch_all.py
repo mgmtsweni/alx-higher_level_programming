@@ -13,6 +13,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    for state in session.query(State).order_by(State.id.asc):
+    states = session.query(State).all()
+    states.order_by(State.id.asc)
+    for state in states:
         print("{}: {}".format(state.id, state.name))
     session.close()
