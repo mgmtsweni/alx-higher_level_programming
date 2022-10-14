@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script that prints state name passed as argument 
+""" script that prints state name passed as argument
     from the database hbtn_0e_0_usa
 """
 
