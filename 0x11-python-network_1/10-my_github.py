@@ -6,7 +6,7 @@ from requests.auth import HTTPBasicAuth
 
 
 if __name__ == '__main__':
-    auth=HTTPBasicAuth(argv[1], argv[2])
+    auth = HTTPBasicAuth(argv[1], argv[2])
     url = 'https://api.github.com/user'
     res = requests.get(url, auth)
     id = res.json()
